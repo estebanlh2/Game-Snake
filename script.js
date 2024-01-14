@@ -51,7 +51,7 @@ const drawSquare = (square, type) => {
     }
 }
 
-
+// funcion mover serpiente
 const moveSnake = () => {
     const newSquare = String(
     Number(snake[snake.length - 1]) + directions[direction])
@@ -76,14 +76,14 @@ const moveSnake = () => {
     }
 }
 
-
+// funcion crear comida
 const addFood = () => {
     score++;
     updateScore();
     createRandomFood()
 }
 
-
+// funcion fin del juego
 const gameOver = () => {
     gameOverSign.style.display = 'block';
     clearInterval(moveInterval)
@@ -91,11 +91,11 @@ const gameOver = () => {
 }
 
 
-
+//funcion para determinar la direccion de la serpiente
 const SetDirection = newDirection => {
     direction = newDirection;
 }
-
+//poner el movimiento de la serpiente
 const directionEvent = key => {
     switch (key.code) {
         case 'ArrowUp':
